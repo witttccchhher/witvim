@@ -37,5 +37,11 @@ Snacks.config.style("terminal", {
 })
 
 map("n", "<leader>t", function () Snacks.terminal.toggle() end)
+map("n", "<leader>l", function () Snacks.lazygit.open() end)
 
 map("n", "<CR>", "za")
+
+map("i", "io", "<Esc>")
+map("i", "oi", "<Esc>")
+
+map("n", "<leader>y", "<cmd>%y+<CR>")

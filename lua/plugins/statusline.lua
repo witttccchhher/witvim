@@ -18,13 +18,34 @@ return {
       end
       return table.concat(c, '|')
     end
+    local deftheme = { fg = colors.base00, bg = colors.base0C }
+    local septheme = { fg = colors.base00, bg = colors.base00 }
     local sep = {
-      "%=",
-      color = { fg = colors.base00, bg = "None" },
+      "%="
     }
     opts.options = {
       section_separators = "",
-      component_separators = ""
+      component_separators = "",
+      globalstatus = true,
+      always_divide_middle = false,
+      theme = {
+        normal = {
+          a = deftheme,
+          b = septheme,
+          c = septheme,
+          x = septheme,
+          y = septheme,
+          z = deftheme
+        },
+        inactive = {
+          a = deftheme,
+          b = septheme,
+          c = septheme,
+          x = septheme,
+          y = septheme,
+          z = deftheme
+        }
+      }
     }
 		opts.sections = {
       lualine_a = {
@@ -36,18 +57,14 @@ return {
             end
             return str
           end,
-          icon = "",
-          color = {
-            bg = colors.base0C,
-            gui = "bold",
-            fg = colors.base00
-          }
+          icon = ""
         }
       },
-      lualine_b = { sep  },
+      lualine_b = { sep },
       lualine_c = { sep },
       lualine_x = { sep },
-      lualine_y = {
+      lualine_y = { sep },
+      lualine_z = {
         {
           "lsp-status",
           icons = {
@@ -55,78 +72,14 @@ return {
             inactive = "󰴀"
           },
           show_count = false,
-          color = {
-            bg = colors.base0C,
-            gui = "bold",
-            fg = colors.base00
-          },
           colors = {
-            active = { fg = colors.base00 },
-            inactive = { fg = colors.base00 },
-            count = { fg = colors.base00 }
+            active = { bg = colors.base0C, gui = "bold", fg = colors.base00 },
+            inactive = { bg = colors.base0C, gui = "bold", fg = colors.base00 },
+            count = { bg = colors.base0C, gui = "bold", fg = colors.base00 }
           }
-        }
-      },
-      lualine_z = {
+        },
         {
-          clients_lsp,
-          color = {
-            bg = colors.base0C,
-            gui = "bold",
-            fg = colors.base00
-          }
-        }
-      }
-    }
-    opts.inactive_sections = {
-      lualine_a = {
-        {
-          "branch",
-          fmt = function(str)
-            if str == '' or str == nil then
-              return ' not git repository'
-            end
-            return str
-          end,
-          icon = "",
-          color = {
-            bg = colors.base0C,
-            gui = "bold",
-            fg = colors.base00
-          }
-        }
-      },
-      lualine_b = { sep  },
-      lualine_c = { sep },
-      lualine_x = { sep },
-      lualine_y = {
-        {
-          "lsp-status",
-          icons = {
-            active = "󰪩",
-            inactive = "󰴀"
-          },
-          show_count = false,
-          color = {
-            bg = colors.base0C,
-            gui = "bold",
-            fg = colors.base00
-          },
-          colors = {
-            active = { fg = colors.base00 },
-            inactive = { fg = colors.base00 },
-            count = { fg = colors.base00 }
-          }
-        }
-      },
-      lualine_z = {
-        {
-          clients_lsp,
-          color = {
-            bg = colors.base0C,
-            gui = "bold",
-            fg = colors.base00
-          }
+          clients_lsp
         }
       }
     }

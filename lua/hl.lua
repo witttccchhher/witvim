@@ -41,5 +41,3 @@ hl(0, "CmpItemKindEnumMember", { fg = color.base00, bg = color.base0C })
 hl(0, "CmpItemKindInterface", { fg = color.base00, bg = color.base0F })
 hl(0, "CmpItemKindColor", { fg = color.base00, bg = color.base0F })
 hl(0, "CmpItemKindTypeParameter", { fg = color.base00, bg = color.base0F })
-
--- hl(0, "Folded", { fg = nil })

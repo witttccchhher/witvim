@@ -2,7 +2,7 @@ local o = vim.o
 
 o.cmdheight = 0
 o.number = true
-o.relativenumber = false
+o.relativenumber = true
 -- o.mouse = ""
 o.conceallevel = 1
 o.cursorline = false
