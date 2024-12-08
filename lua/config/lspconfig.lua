@@ -35,6 +35,12 @@ lspconfig.lua_ls.setup {
   }
 }
 
+lspconfig.cssls.setup {
+  on_attach = on_attach,
+  on_init = on_init,
+  capabilities = capabilities
+}
+
 lspconfig.clangd.setup {
   on_attach = on_attach,
   on_init = on_init,
@@ -55,33 +61,7 @@ lspconfig.clangd.setup {
 lspconfig.ts_ls.setup {
   on_attach = on_attach,
   on_init = on_init,
-  capabilities = capabilities,
-  settings = {
-    typescript = {
-      inlayHints = {
-        includeInlayParameterNameHints = "all",
-        includeInlayParameterNameHintsWhenArgumentMatchesName = true,
-        includeInlayFunctionParameterTypeHints = true,
-        includeInlayVariableTypeHints = true,
-        includeInlayVariableTypeHintsWhenTypeMatchesName = true,
-        includeInlayPropertyDeclarationTypeHints = true,
-        includeInlayFunctionLikeReturnTypeHints = true,
-        includeInlayEnumMemberValueHints = true
-      },
-    },
-    javascript = {
-      inlayHints = {
-        includeInlayParameterNameHints = "all",
-        includeInlayParameterNameHintsWhenArgumentMatchesName = true,
-        includeInlayFunctionParameterTypeHints = true,
-        includeInlayVariableTypeHints = true,
-        includeInlayVariableTypeHintsWhenTypeMatchesName = true,
-        includeInlayPropertyDeclarationTypeHints = true,
-        includeInlayFunctionLikeReturnTypeHints = true,
-        includeInlayEnumMemberValueHints = true
-      }
-    }
-  }
+  capabilities = capabilities
 }
 
 lspconfig.basedpyright.setup {
@@ -91,11 +71,18 @@ lspconfig.basedpyright.setup {
   settings = {
     basedpyright = {
       disableTaggedHints = true,
+      -- reportUnannotatedClassAttribute = "none",
       analysis = {
         typeCheckingMode = "off",
         autoSearchPaths = true,
         diagnosticMode = "openFilesOnly",
-        useLibraryCodeForTypes = true
+        useLibraryCodeForTypes = true,
+        inlayHints = {
+          variableTypes = true,
+          callArgumentNames = true,
+          functionReturnTypes = true,
+          genericTypes = true
+        }
       }
     }
   }
@@ -124,4 +111,16 @@ lspconfig.nixd.setup {
       }
     }
   }
+}
+
+lspconfig.gopls.setup {
+  on_attach = on_attach,
+  on_init = on_init,
+  capabilities = capabilities
+}
+
+lspconfig.html.setup {
+  on_attach = on_attach,
+  on_init = on_init,
+  capabilities = capabilities
 }

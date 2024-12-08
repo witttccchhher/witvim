@@ -5,6 +5,7 @@ return {
   opts = {
     bigfile = { enabled = false },
     bufdelete = { enabled = false },
+    dashboard = { enabled = true },
     debug = { enabled = false },
     git = { enabled = false },
     gitbrowse = { enabled = false },
@@ -12,6 +13,8 @@ return {
     notify = { enabled = true },
     notifier = { enabled = true },
     quickfile = { enabled = true },
+    rename = { enabled = false },
+    scratch = { enabled = false },
     statuscolumn = {
       enabled = true,
       folds = {

@@ -2,7 +2,7 @@ local o = vim.o
 
 o.cmdheight = 0
 o.number = true
-o.relativenumber = true
+o.relativenumber = false
 -- o.mouse = ""
 o.conceallevel = 1
 o.cursorline = false
@@ -13,6 +13,7 @@ o.autoindent = true
 o.termguicolors = true
 o.clipboard = "unnamedplus"
 o.undofile = true
+o.swapfile = false
 o.foldmethod = "expr"
 o.foldexpr = "v:lua.vim.treesitter.foldexpr()"
 o.foldtext = ""

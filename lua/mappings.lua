@@ -1,5 +1,4 @@
 local map = vim.keymap.set
-
 map("n", ";", ":", { desc = "CMD enter command mode" })
 
 map("n", "<leader>n", ":NvimTreeToggle<cr>")
@@ -41,7 +40,7 @@ map("n", "<leader>l", function () Snacks.lazygit.open() end)
 
 map("n", "<CR>", "za")
 
-map("i", "io", "<Esc>")
-map("i", "oi", "<Esc>")
-
 map("n", "<leader>y", "<cmd>%y+<CR>")
+
+map("n", "z", require("zen-mode").toggle)
+map("n", "q", "<cmd>qall<CR>")

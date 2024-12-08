@@ -18,7 +18,7 @@ return {
       end
       return table.concat(c, '|')
     end
-    local deftheme = { fg = colors.base00, bg = colors.base0C }
+    local deftheme = { fg = colors.base00, bg = colors.base0C, gui = "bold" }
     local septheme = { fg = colors.base00, bg = colors.base00 }
     local sep = {
       "%="
