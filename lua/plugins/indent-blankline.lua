@@ -2,13 +2,13 @@ return {
   "lukas-reineke/indent-blankline.nvim",
   event = "User FilePost",
   opts = {
+    enabled = true,
     indent = {
-      char = "▏"
+      char = "│"
     },
     scope = {
-      show_start = false,
-      show_end = false
-    }
+      enabled = false
+    },
   },
   config = function(_, opts)
     local hooks = require "ibl.hooks"
