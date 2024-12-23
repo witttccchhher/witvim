@@ -18,8 +18,8 @@ return {
       end
       return table.concat(c, '|')
     end
-    local deftheme = { fg = colors.base00, bg = colors.base0C, gui = "bold" }
-    local septheme = { fg = colors.base00, bg = colors.base00 }
+    local deftheme = { fg = colors.base00, bg = colors.base0D, gui = "bold" }
+    local septheme = { fg = colors.base00, bg = "#202020" }
     local sep = {
       "%="
     }
@@ -73,9 +73,9 @@ return {
           },
           show_count = false,
           colors = {
-            active = { bg = colors.base0C, gui = "bold", fg = colors.base00 },
-            inactive = { bg = colors.base0C, gui = "bold", fg = colors.base00 },
-            count = { bg = colors.base0C, gui = "bold", fg = colors.base00 }
+            active = { bg = colors.base0D, gui = "bold", fg = colors.base00 },
+            inactive = { bg = colors.base0D, gui = "bold", fg = colors.base00 },
+            count = { bg = colors.base0D, gui = "bold", fg = colors.base00 }
           }
         },
         {

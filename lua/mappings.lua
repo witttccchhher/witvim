@@ -11,8 +11,6 @@ map("n", "<C-l>", "<C-w>l", { desc = "switch window right" })
 map("n", "<C-j>", "<C-w>j", { desc = "switch window down" })
 map("n", "<C-k>", "<C-w>k", { desc = "switch window up" })
 
-map("n", "<C-s>", "<cmd>w<CR>", { desc = "general save file" })
-
 map("n", "<leader>b", "<cmd>enew<CR>", { desc = "buffer new" })
 map("n", "<tab>", "<cmd>bn<CR>", { desc = "buffer goto next" })
 map("n", "<S-tab>", "<cmd>bp<CR>", { desc = "buffer goto prev" })
@@ -36,8 +34,6 @@ Snacks.config.style("terminal", {
 
 map("n", "<leader>t", function () Snacks.terminal.toggle() end, { desc = "toggle terminal" })
 map("n", "<leader>l", function () Snacks.lazygit.open() end, { desc = "open lazygit" })
-
--- map("n", "<CR>", "za", { desc = "open fold" })
 
 map("n", "<leader>y", "<cmd>%y+<CR>", { desc = "copy file" })
 
