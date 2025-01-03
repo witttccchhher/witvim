@@ -23,6 +23,13 @@ end
 lspconfig.lua_ls.setup {
   on_init = on_init,
   capabilities = capabilities,
+  settings = {
+    Lua = {
+      diagnostics = {
+        disable = { "lowercase-global" }
+      }
+    }
+  }
 }
 
 lspconfig.cssls.setup {
