@@ -1,6 +1,8 @@
 local color = require('base16-colorscheme').colors
 local hl = vim.api.nvim_set_hl
 
+hl(0, "TinyDiagArrow", { fg = color.base07 })
+
 -- blink.cmp
 
 hl(0, "BlinkCmpMenu", { fg = color.base07, bg = "#191919" })

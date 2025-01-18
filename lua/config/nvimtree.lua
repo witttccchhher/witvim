@@ -1,28 +1,69 @@
 return {
   sync_root_with_cwd = true,
+  auto_reload_on_write = true,
+  disable_netrw = true,
+  filters = {
+    custom = {
+      "^.git$",
+      "^.backups$",
+      "^.cache$",
+      "^.cargo$",
+      "^.compose-cache$",
+      "^.gnupg$",
+      "^.icons$",
+      "^.lutgen$",
+      "^.lyrics$",
+      "^.mozilla$",
+      "^.nix-defexpr$",
+      "^.nix-profile$",
+      "^.npm$",
+      "^.pki$",
+      "^.var$",
+      "^.bash_history$",
+      "^.gtkrc-2.0$",
+      "^.nano-recentf$",
+      "^.nano-savehist$",
+      "^.python_history$",
+      "^.viminfo$",
+      "^.yarnrc$",
+      "^.zcompdump$",
+      "^.zcompdump.nixos.12524$",
+      "^.zcompdump.nixos.28737$"
+    }
+  },
   update_focused_file = {
     enable = true,
-    update_root = false,
+    update_root = false
   },
   view = {
-    width = 40,
     preserve_window_proportions = true,
+    side = "right",
+    width = 40
   },
   renderer = {
-    highlight_git = true,
+    highlight_git = "none",
+    highlight_opened_files = "name",
+    indent_width = 4,
     indent_markers = { enable = true },
     icons = {
+      padding = "  ",
       glyphs = {
-        default = "󰈔",
+        default = "󰡯",
+        symlink = "󰪹",
+        bookmark = "",
+        modified = "",
+        hidden = "",
         folder = {
+          arrow_closed = "",
+          arrow_open = "",
           default = "󰉋",
-          empty = "󰉖",
-          empty_open = "󱥿",
-          open = "󱥾",
-          symlink = "󱧮"
-        },
-        git = { unmerged = "" }
-      },
-    },
-  },
+          open = "󰉋",
+          empty = "󰉋",
+          empty_open = "󰉋",
+          symlink = "󰉋",
+          symlink_open = "󰉋"
+        }
+      }
+    }
+  }
 }

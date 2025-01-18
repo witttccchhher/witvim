@@ -29,6 +29,8 @@ for name, icon in pairs(symbols) do
 end
 
 vim.diagnostic.config({
-  underline = false,
-  virtual_text = { spacing = 1, prefix = "󱓻", suffix = " " }
+  virtual_text = false
 })
+
+vim.g.loaded_netrw       = 1
+vim.g.loaded_netrwPlugin = 1

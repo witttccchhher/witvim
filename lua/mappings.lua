@@ -38,3 +38,7 @@ map("n", "<leader>l", function () Snacks.lazygit.open() end, { desc = "open lazy
 map("n", "<leader>y", "<cmd>%y+<CR>", { desc = "copy file" })
 
 map("n", "q", "<cmd>qall<CR>", { desc = "quit" })
+
+map("n", "<leader>er", function () require("executor").commands.run() end)
+map("n", "<leader>ewn", function () require("executor").commands.run_with_new_command() end)
+map("n", "<leader>et", function () require("executor").commands.toggle_detail() end)

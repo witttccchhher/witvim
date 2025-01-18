@@ -58,10 +58,22 @@ lspconfig.basedpyright.setup {
   settings = {
     basedpyright = {
       analysis = {
-        typeCheckingMode = "off",
+        typeCheckingMode = "basic",
         autoSearchPaths = true,
-        diagnosticMode = "openFilesOnly",
-        useLibraryCodeForTypes = true
+        logLevel = "Warning",
+        autoImportCompletions = false,
+        diagnosticMode = "workspace",
+        useLibraryCodeForTypes = true,
+        diagnosticSeverityOverrides = {
+          reportUnusedClass = false,
+          reportUnusedFunction = false,
+          reportUnusedVariable = false,
+          reportUnusedCallResult = false,
+          reportUnusedCoroutine = false,
+          reportUnusedExcept = false,
+          reportUnusedExpression = false,
+          reportUnusedParameter = false
+        }
       }
     }
   }
