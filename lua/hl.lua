@@ -3,6 +3,14 @@ local hl = vim.api.nvim_set_hl
 
 hl(0, "TinyDiagArrow", { fg = color.base07 })
 
+hl(0, "NvimTreeFolderName", { fg = color.base05 })
+hl(0, "NvimTreeEmptyFolderName", { fg = color.base05 })
+hl(0, "NvimTreeHiddenFolderName", { fg = color.base05 })
+hl(0, "NvimTreeSymlinkFolderName", { fg = color.base05 })
+hl(0, "NvimTreeOpenedFolderName", { fg = color.base05 })
+hl(0, "NvimTreeFolderIcon", { fg = color.base08 })
+hl(0, "NvimTreeSymlink", { fg = color.base05 })
+
 -- blink.cmp
 
 hl(0, "BlinkCmpMenu", { fg = color.base07, bg = "#191919" })

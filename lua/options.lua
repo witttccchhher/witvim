@@ -15,6 +15,7 @@ o.termguicolors = true
 o.clipboard = "unnamedplus"
 o.undofile = true
 o.swapfile = false
+o.laststatus = 0
 
 vim.api.nvim_set_hl(0, "DapBreakpoint", { ctermbg=0, fg="#c65f5f" })
 vim.fn.sign_define("DapBreakpoint", { text=" ", texthl="DapBreakpoint" })
@@ -31,6 +32,3 @@ end
 vim.diagnostic.config({
   virtual_text = false
 })
-
-vim.g.loaded_netrw       = 1
-vim.g.loaded_netrwPlugin = 1

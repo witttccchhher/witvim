@@ -42,11 +42,11 @@ return {
   },
   renderer = {
     highlight_git = "none",
-    highlight_opened_files = "name",
-    indent_width = 4,
+    highlight_opened_files = "none",
+    indent_width = 3,
     indent_markers = { enable = true },
     icons = {
-      padding = "  ",
+      padding = " ",
       glyphs = {
         default = "󰡯",
         symlink = "󰪹",
@@ -57,11 +57,20 @@ return {
           arrow_closed = "",
           arrow_open = "",
           default = "󰉋",
-          open = "󰉋",
-          empty = "󰉋",
-          empty_open = "󰉋",
-          symlink = "󰉋",
-          symlink_open = "󰉋"
+          open = "󰝰",
+          empty = "󰉖",
+          empty_open = "󰉖",
+          symlink = "󱧮",
+          symlink_open = "󱧮"
+        },
+        git = {
+          unstaged = "",
+          staged = "",
+          unmerged = "",
+          renamed = "",
+          untracked = "",
+          deleted = "",
+          ignored = ""
         }
       }
     }

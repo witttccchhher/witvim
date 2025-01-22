@@ -1,5 +1,4 @@
 local lspconfig = require("lspconfig")
-local servers = lspconfig.util.available_servers()
 
 local on_init = function(client, _)
   if client.supports_method "textDocument/semanticTokens" then
@@ -10,15 +9,7 @@ end
 local capabilities = vim.tbl_deep_extend("force", {},
   vim.lsp.protocol.make_client_capabilities(),
   require('blink.cmp').get_lsp_capabilities() or {}
-  -- require("cmp_nvim_lsp").default_capabilities() or {}
 )
-
-for _, lsp in ipairs(servers) do
-  lspconfig[lsp].setup {
-    on_init = on_init,
-    capabilities = capabilities
-  }
-end
 
 lspconfig.lua_ls.setup {
   on_init = on_init,
