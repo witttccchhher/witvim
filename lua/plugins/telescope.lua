@@ -3,6 +3,6 @@ return {
   dependencies = { "nvim-treesitter/nvim-treesitter" },
   cmd = "Telescope",
   opts = function()
-    return require "config.telescope"
+    return require("config.telescope")
   end
 }

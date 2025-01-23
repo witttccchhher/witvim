@@ -1,5 +1,11 @@
 local lspconfig = require("lspconfig")
 
+local on_attach = function(client, bufnr)
+  if client.server_capabilities.inlayHintProvider then
+    vim.lsp.inlay_hint.enable(true, nil, bufnr)
+  end
+end
+
 local on_init = function(client, _)
   if client.supports_method "textDocument/semanticTokens" then
     client.server_capabilities.semanticTokensProvider = nil
@@ -12,6 +18,7 @@ local capabilities = vim.tbl_deep_extend("force", {},
 )
 
 lspconfig.lua_ls.setup {
+  on_attach = on_attach,
   on_init = on_init,
   capabilities = capabilities,
   settings = {
@@ -24,26 +31,31 @@ lspconfig.lua_ls.setup {
 }
 
 lspconfig.cssls.setup {
+  on_attach = on_attach,
   on_init = on_init,
   capabilities = capabilities
 }
 
 lspconfig.bashls.setup {
+  on_attach = on_attach,
   on_init = on_init,
   capabilities = capabilities
 }
 
 lspconfig.clangd.setup {
+  on_attach = on_attach,
   on_init = on_init,
   capabilities = capabilities,
 }
 
 lspconfig.ts_ls.setup {
+  on_attach = on_attach,
   on_init = on_init,
   capabilities = capabilities
 }
 
 lspconfig.basedpyright.setup {
+  on_attach = on_attach,
   on_init = on_init,
   capabilities = capabilities,
   settings = {
@@ -71,6 +83,7 @@ lspconfig.basedpyright.setup {
 }
 
 lspconfig.nixd.setup {
+  on_attach = on_attach,
   on_init = on_init,
   capabilities = capabilities,
   settings = {
@@ -94,11 +107,13 @@ lspconfig.nixd.setup {
 }
 
 lspconfig.gopls.setup {
+  on_attach = on_attach,
   on_init = on_init,
   capabilities = capabilities
 }
 
 lspconfig.html.setup {
+  on_attach = on_attach,
   on_init = on_init,
   capabilities = capabilities
 }

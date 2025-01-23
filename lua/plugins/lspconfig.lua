@@ -2,7 +2,11 @@ return {
   "neovim/nvim-lspconfig",
   dependencies = { "saghen/blink.cmp" },
   opts = {
-    inlay_hints = { enabled = false }
+    diagnostics = {
+      underline = false,
+      update_on_insert = false
+    },
+    inlay_hints = { enabled = true }
   },
   config = function ()
     require("config.lspconfig")

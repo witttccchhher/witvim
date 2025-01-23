@@ -1,9 +1,7 @@
 return {
   "andrewferrier/wrapping.nvim",
   ft = "markdown",
-  config = function()
-    require("wrapping").setup({
+  opts = function()
       create_keymaps = false
-    })
   end
 }
