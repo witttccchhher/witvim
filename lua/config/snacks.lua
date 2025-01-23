@@ -38,11 +38,11 @@ return {
   scratch = { enabled = false },
   scroll = { enabled = false },
   statuscolumn = { enabled = false },
-  terminal = { enabled = true },
+  terminal = { enabled = false },
   toggle = { enabled = false },
   util = { enabled = false },
   win = { enabled = false },
-  words = { enabled = true },
+  words = { enabled = false },
   zen = { enabled = false },
 
   styles = {

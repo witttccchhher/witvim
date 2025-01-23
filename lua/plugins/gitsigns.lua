@@ -1,9 +1,9 @@
 return {
   "lewis6991/gitsigns.nvim",
-  config = function ()
-    require("gitsigns").setup()
+  config = function (_, opts)
+    require("gitsigns").setup(opts)
   end,
   opts = function ()
-    require("config.gitsigns")
+    return require("config.gitsigns")
   end
 }
