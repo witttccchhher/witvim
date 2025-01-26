@@ -1,6 +1,6 @@
 return {
   "google/executor.nvim",
-  cmd = { "ExecutorRun", "ExecutorRunWithNewCommand", "ExecutorToggleDetail" },
+  cmd = { "ExecutorShowPresets", "ExecutorRun", "ExecutorRunWithNewCommand", "ExecutorToggleDetail" },
   dependencies = {
     "MunifTanjim/nui.nvim"
   },

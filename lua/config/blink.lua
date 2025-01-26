@@ -1,4 +1,7 @@
 return {
+  enabled = function ()
+    return vim.bo.filetype ~= "markdown"
+  end,
   signature = { enabled = true },
   keymap = {
     ["<CR>"] = { "accept", "fallback" },
