@@ -1,0 +1,21 @@
+-- vim.o.background = "dark"
+--
+-- vim.cmd("colorscheme base16-gruvbox-material-dark-hard")
+-- require("base16-colorscheme").setup({
+--   base00 = "#16161a",
+--   base01 = "#212126",
+--   base02 = "#2a2a30",
+--   base03 = "#373740",
+--   base04 = "#676778",
+--   base05 = "#e9ecf2",
+--   base06 = "#e9ecf2",
+--   base07 = "#e9ecf2",
+--   base08 = "#f25c5c",
+--   base09 = "#ff9c6a",
+--   base0A = "#ff9c6a",
+--   base0B = "#55b682",
+--   base0C = "#7aaaff",
+--   base0D = "#f17ac6",
+--   base0E = "#B87AFF",
+--   base0F = "#9595ab"
+-- })
